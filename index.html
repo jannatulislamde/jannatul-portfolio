@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JANNAT - Personal Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- SVG icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-align" viewBox="0 0 24 24"><line x1="21" y1="10" x2="7" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="21" y1="18" x2="7" y2="18"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+    <symbol id="i-tv" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></symbol>
+    <symbol id="i-slack" viewBox="0 0 24 24"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="header">
+  <a href="#home" class="brand">
+    <img src="images/logo image.jpg" alt="Inbio logo">
+    <span>JANNAT</span>
+  </a>
+  <nav class="main-nav" id="mainNav">
+    <a href="#home" class="active">Home</a>
+    <a href="#features">Features</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#resume">Resume</a>
+    <a href="#clients">Clients</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a href="#pricing" class="btn-neu btn-buy">Text Me Now</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</header>
+
+<a href="#" class="demo-tab" aria-label="Demos"><span>D</span><span>E</span><span>M</span><span>O</span><span>S</span></a>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7 order-lg-2 hero-text">
+        <h1 class="hero-title">Hi, I’m <span class="pink">Jannatul Islam</span><br>
+          <span class="typed-line"><span class="a">a</span> <span class="pink typed-word" id="typed"></span><span class="cursor"></span></span>
+        </h1>
+        <p class="hero-desc">I use animation as a third dimension by which to simplify experiences and kuiding thro each and every interaction. I’m not adding motion just to spruce things up, but doing it in ways that. Lorem Ipsum dolor</p>
+
+        <div class="hero-links">
+          <div>
+            <h6 class="mini-label">Find with me</h6>
+            <div class="icon-row">
+              <a href="#" class="icon-box" aria-label="Facebook"><svg class="ic"><use href="#i-facebook"/></svg></a>
+              <a href="#" class="icon-box" aria-label="Instagram"><svg class="ic"><use href="#i-instagram"/></svg></a>
+              <a href="#" class="icon-box" aria-label="LinkedIn"><svg class="ic"><use href="#i-linkedin"/></svg></a>
+            </div>
+          </div>
+          <div>
+            <h6 class="mini-label">Best skill on</h6>
+            <div class="icon-row">
+              <a href="#" class="icon-box" aria-label="InVision"><span class="skill-ic skill-ps">Ps</span></a>
+              <a href="#" class="icon-box" aria-label="Sketch"><span class="skill-ic skill-xd">Xd</span></a>
+              <a href="#" class="icon-box" aria-label="Figma"><span class="skill-ring"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5 order-lg-1 hero-photo-col">
+        <div class="hero-photo"><img src="images/Logo two.jpg" alt="Jone Lee"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><hr class="divider"></div>
+
+<!-- ============ FEATURES ============ -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="head-left reveal">
+      <span class="eyebrow">Features</span>
+      <h2 class="title">What I Do</h2>
+    </div>
+    <div class="row g-neu">
+      <div class="col-lg-4 col-md-6 reveal"><div class="neu-card feature">
+        <svg class="ic ic-pink"><use href="#i-align"/></svg>
+        <h4>Business Strategy</h4>
+        <p>I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
+      </div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="neu-card feature">
+        <svg class="ic ic-pink"><use href="#i-book"/></svg>
+        <h4>App Development</h4>
+        <p>It uses a dictionary of over 200 Latin words, combined with a handful of model sentences.</p>
+      </div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="neu-card feature">
+        <svg class="ic ic-pink"><use href="#i-tv"/></svg>
+        <h4>App Development</h4>
+        <p>I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
+      </div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="neu-card feature">
+        <svg class="ic ic-pink"><use href="#i-message"/></svg>
+        <h4>Mobile App</h4>
+        <p>There are many variations of passages of available, but the majority.</p>
+      </div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="neu-card feature">
+        <svg class="ic ic-pink"><use href="#i-wifi"/></svg>
+        <h4>CEO Marketing</h4>
+        <p>always free from repetition, injected humour, or non-characteristic words etc.</p>
+      </div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="neu-card feature">
+        <svg class="ic ic-pink"><use href="#i-slack"/></svg>
+        <h4>Personal Portfolio April</h4>
+        <p>It uses a dictionary of over 200 Latin words, combined with a handful of model sentences.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><hr class="divider"></div>
+
+<!-- ============ PORTFOLIO ============ -->
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="head-center reveal">
+      <span class="eyebrow">Visit my portfolio and keep your feedback</span>
+      <h2 class="title">My Portfolio</h2>
+    </div>
+    <div class="row g-neu">
+      <div class="col-lg-4 col-md-6 reveal"><a href="#" class="neu-card post"><img src="images/portfolio-1.png" alt=""><div class="meta"><span class="cat">Development</span><span class="likes"><svg class="ic"><use href="#i-heart"/></svg>600</span></div><h4>The services provide for design</h4></a></div>
+      <div class="col-lg-4 col-md-6 reveal"><a href="#" class="neu-card post"><img src="images/portfolio-2.png" alt=""><div class="meta"><span class="cat">Application</span><span class="likes"><svg class="ic"><use href="#i-heart"/></svg>750</span></div><h4>Mobile app landing design &amp; app maintain</h4></a></div>
+      <div class="col-lg-4 col-md-6 reveal"><a href="#" class="neu-card post"><img src="images/portfolio-3.png" alt=""><div class="meta"><span class="cat">Photoshop</span><span class="likes"><svg class="ic"><use href="#i-heart"/></svg>630</span></div><h4>Logo design creativity &amp; Application</h4></a></div>
+      <div class="col-lg-4 col-md-6 reveal"><a href="#" class="neu-card post"><img src="images/portfolio-4.png" alt=""><div class="meta"><span class="cat">Figma</span><span class="likes"><svg class="ic"><use href="#i-heart"/></svg>360</span></div><h4>Mobile app landing design &amp; Services</h4></a></div>
+      <div class="col-lg-4 col-md-6 reveal"><a href="#" class="neu-card post"><img src="images/portfolio-5.png" alt=""><div class="meta"><span class="cat">Web Design</span><span class="likes"><svg class="ic"><use href="#i-heart"/></svg>280</span></div><h4>Design for tecnology &amp; services</h4></a></div>
+      <div class="col-lg-4 col-md-6 reveal"><a href="#" class="neu-card post"><img src="images/portfolio-6.png" alt=""><div class="meta"><span class="cat">Web Design</span><span class="likes"><svg class="ic"><use href="#i-heart"/></svg>690</span></div><h4>App for tecnology &amp; services</h4></a></div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><hr class="divider"></div>
+
+<!-- ============ RESUME ============ -->
+<section class="section" id="resume">
+  <div class="container">
+    <div class="head-center reveal">
+      <span class="eyebrow">7+ years of experience</span>
+      <h2 class="title">My Resume</h2>
+    </div>
+
+    <div class="tab-bar reveal" id="resumeTabs">
+      <button class="tab-btn active" data-tab="edu">Education</button>
+      <button class="tab-btn" data-tab="skills">Professional Skills</button>
+      <button class="tab-btn" data-tab="exp">Experience</button>
+      <button class="tab-btn" data-tab="interview">Interview</button>
+    </div>
+
+    <!-- Education -->
+    <div class="tab-panel active" id="tab-edu">
+      <div class="row g-resume">
+        <div class="col-md-6">
+          <span class="eyebrow small-eyebrow">2007 - 2010</span>
+          <h3 class="res-title">Education Quality</h3>
+          <div class="timeline">
+            <div class="t-item"><div class="neu-card res-card"><div class="res-top"><div><h5>Personal Portfolio April Fools</h5><small>University of DVI (1997 - 2001)</small></div><span class="badge-neu">4.30/5</span></div><hr><p>The education should be very interactual. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p></div></div>
+            <div class="t-item"><div class="neu-card res-card"><div class="res-top"><div><h5>Examples Of Personal Portfolio</h5><small>College of Studies (2000 - 2002)</small></div><span class="badge-neu">4.50/5</span></div><hr><p>Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p></div></div>
+            <div class="t-item"><div class="neu-card res-card"><div class="res-top"><div><h5>Tips For Personal Portfolio</h5><small>University of Studies (1997 - 2001)</small></div><span class="badge-neu">4.80/5</span></div><hr><p>If you are going to use a passage. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p></div></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <span class="eyebrow small-eyebrow">2007 - 2010</span>
+          <h3 class="res-title">Job Experience</h3>
+          <div class="timeline">
+            <div class="t-item"><div class="neu-card res-card"><div class="res-top"><div><h5>Diploma in Web Development</h5><small>BSE in CSE (2004 - 2008)</small></div><span class="badge-neu">4.70/5</span></div><hr><p>Contrary to popular belief. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p></div></div>
+            <div class="t-item"><div class="neu-card res-card"><div class="res-top"><div><h5>The Personal Portfolio Mystery</h5><small>Job at Rainbow-Themes (2008 - 2016)</small></div><span class="badge-neu">4.95/5</span></div><hr><p>Generate Lorem Ipsum which looks. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p></div></div>
+            <div class="t-item"><div class="neu-card res-card"><div class="res-top"><div><h5>Diploma in Computer Science</h5><small>Works at Plugin Development (2016 - 2020)</small></div><span class="badge-neu">5.00/5</span></div><hr><p>Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Professional Skills -->
+    <div class="tab-panel" id="tab-skills">
+      <div class="row g-resume">
+        <div class="col-md-6">
+          <span class="eyebrow small-eyebrow">Design</span>
+          <h3 class="res-title">Design Skills</h3>
+          <div class="neu-card skill-card">
+            <div class="skill"><div class="skill-head"><span>Figma</span><b>90%</b></div><div class="bar"><i data-w="90"></i></div></div>
+            <div class="skill"><div class="skill-head"><span>Adobe XD</span><b>82%</b></div><div class="bar"><i data-w="82"></i></div></div>
+            <div class="skill"><div class="skill-head"><span>Photoshop</span><b>75%</b></div><div class="bar"><i data-w="75"></i></div></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <span class="eyebrow small-eyebrow">Code</span>
+          <h3 class="res-title">Development Skills</h3>
+          <div class="neu-card skill-card">
+            <div class="skill"><div class="skill-head"><span>HTML / CSS</span><b>95%</b></div><div class="bar"><i data-w="95"></i></div></div>
+            <div class="skill"><div class="skill-head"><span>JavaScript</span><b>85%</b></div><div class="bar"><i data-w="85"></i></div></div>
+            <div class="skill"><div class="skill-head"><span>React</span><b>70%</b></div><div class="bar"><i data-w="70"></i></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="tab-panel" id="tab-exp">
+      <div class="row g-resume">
+        <div class="col-md-6">
+          <span class="eyebrow small-eyebrow">2012 - 2016</span>
+          <h3 class="res-title">Previous Work</h3>
+          <div class="timeline">
+            <div class="t-item"><div class="neu-card res-card"><div class="res-top"><div><h5>Senior UI Designer</h5><small>Rainbow-Themes (2014 - 2016)</small></div><span class="badge-neu">4.90/5</span></div><hr><p>Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p></div></div>
+            <div class="t-item"><div class="neu-card res-card"><div class="res-top"><div><h5>Frontend Developer</h5><small>Plugin Development (2012 - 2014)</small></div><span class="badge-neu">4.60/5</span></div><hr><p>Contrary to popular belief. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p></div></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <span class="eyebrow small-eyebrow">2017 - Now</span>
+          <h3 class="res-title">Current Work</h3>
+          <div class="timeline">
+            <div class="t-item"><div class="neu-card res-card"><div class="res-top"><div><h5>Product Design Lead</h5><small>Freelance (2017 - Now)</small></div><span class="badge-neu">5.00/5</span></div><hr><p>Generate Lorem Ipsum which looks. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p></div></div>
+            <div class="t-item"><div class="neu-card res-card"><div class="res-top"><div><h5>Mentor &amp; Speaker</h5><small>Design Community (2018 - Now)</small></div><span class="badge-neu">4.85/5</span></div><hr><p>If you are going to use a passage. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interview -->
+    <div class="tab-panel" id="tab-interview">
+      <div class="row g-resume">
+        <div class="col-md-6">
+          <span class="eyebrow small-eyebrow">Q &amp; A</span>
+          <h3 class="res-title">How I Work</h3>
+          <div class="timeline">
+            <div class="t-item"><div class="neu-card res-card"><div class="res-top"><div><h5>What is your design process?</h5><small>Discovery to delivery</small></div><span class="badge-neu">Q1</span></div><hr><p>Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p></div></div>
+            <div class="t-item"><div class="neu-card res-card"><div class="res-top"><div><h5>How do you handle feedback?</h5><small>Collaboration</small></div><span class="badge-neu">Q2</span></div><hr><p>Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit.</p></div></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <span class="eyebrow small-eyebrow">Q &amp; A</span>
+          <h3 class="res-title">Why Hire Me</h3>
+          <div class="timeline">
+            <div class="t-item"><div class="neu-card res-card"><div class="res-top"><div><h5>What tools do you use?</h5><small>Daily workflow</small></div><span class="badge-neu">Q3</span></div><hr><p>Contrary to popular belief. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit.</p></div></div>
+            <div class="t-item"><div class="neu-card res-card"><div class="res-top"><div><h5>Are you available for freelance?</h5><small>Availability</small></div><span class="badge-neu">Q4</span></div><hr><p>Generate Lorem Ipsum which looks. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><hr class="divider"></div>
+
+<!-- ============ TESTIMONIAL ============ -->
+<section class="section" id="testimonial">
+  <div class="container">
+    <div class="head-center reveal">
+      <span class="eyebrow">What clients say</span>
+      <h2 class="title">Testimonial</h2>
+    </div>
+
+    <div class="testi reveal" id="testi">
+      <div class="testi-arrows">
+        <button class="icon-box sm" id="tPrev" aria-label="Previous"><svg class="ic ic-pink"><use href="#i-arrow-left"/></svg></button>
+        <button class="icon-box sm" id="tNext" aria-label="Next"><svg class="ic ic-pink"><use href="#i-arrow-right"/></svg></button>
+      </div>
+      <div class="slides">
+        <div class="slide active">
+          <div class="neu-card testi-person">
+            <img src="images/Logo two.jpg" alt="Nevine Acotanza">
+            <span class="company">Rainbow-Themes</span>
+            <h4>Nevine Acotanza</h4>
+            <small>Chief Operating Officer</small>
+          </div>
+          <div class="testi-side">
+            <div class="testi-top"><svg class="quote" viewBox="0 0 94 76" aria-hidden="true"><path d="M2 2h36v32c0 22-12 36-34 40v-9c14-4 21-13 21-27H2V2zM52 2h36v32c0 22-12 36-34 40v-9c14-4 21-13 21-27H52V2z" fill="none" stroke="#c7cbd0" stroke-width="3"/></svg></div>
+            <div class="neu-card testi-text">
+              <div class="res-top"><div><h5>Android App Development</h5><small>via Upwork - Mar 4, 2015 - Aug 30, 2021</small></div><span class="stars">★★★★★</span></div><hr>
+              <p>Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante. Ut tincidunt est ac dolor aliquam sodales phasellus smauris .</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="neu-card testi-person">
+            <img src="images/testimonial-2.png" alt="Elena Marlow">
+            <span class="company">Studio North</span>
+            <h4>Elena Marlow</h4>
+            <small>Creative Director</small>
+          </div>
+          <div class="testi-side">
+            <div class="testi-top"><svg class="quote" viewBox="0 0 94 76" aria-hidden="true"><path d="M2 2h36v32c0 22-12 36-34 40v-9c14-4 21-13 21-27H2V2zM52 2h36v32c0 22-12 36-34 40v-9c14-4 21-13 21-27H52V2z" fill="none" stroke="#c7cbd0" stroke-width="3"/></svg></div>
+            <div class="neu-card testi-text">
+              <div class="res-top"><div><h5>iOS App Design</h5><small>via Fiverr - Jan 12, 2016 - Jun 4, 2020</small></div><span class="stars">★★★★★</span></div><hr>
+              <p>Contrary to popular belief. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante. Ut tincidunt est ac dolor aliquam sodales phasellus smauris .</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="neu-card testi-person">
+            <img src="images/testimonial-3.png" alt="Daniel Reyes">
+            <span class="company">Pixel Forge</span>
+            <h4>Daniel Reyes</h4>
+            <small>Product Manager</small>
+          </div>
+          <div class="testi-side">
+            <div class="testi-top"><svg class="quote" viewBox="0 0 94 76" aria-hidden="true"><path d="M2 2h36v32c0 22-12 36-34 40v-9c14-4 21-13 21-27H2V2zM52 2h36v32c0 22-12 36-34 40v-9c14-4 21-13 21-27H52V2z" fill="none" stroke="#c7cbd0" stroke-width="3"/></svg></div>
+            <div class="neu-card testi-text">
+              <div class="res-top"><div><h5>Website Redesign</h5><small>via Upwork - Feb 20, 2017 - Oct 8, 2019</small></div><span class="stars">★★★★★</span></div><hr>
+              <p>Generate Lorem Ipsum which looks. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante. Ut tincidunt est ac dolor aliquam sodales phasellus smauris .</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="neu-card testi-person">
+            <img src="images/testimonial-4.png" alt="Priya Nair">
+            <span class="company">Craftly</span>
+            <h4>Priya Nair</h4>
+            <small>Founder & CEO</small>
+          </div>
+          <div class="testi-side">
+            <div class="testi-top"><svg class="quote" viewBox="0 0 94 76" aria-hidden="true"><path d="M2 2h36v32c0 22-12 36-34 40v-9c14-4 21-13 21-27H2V2zM52 2h36v32c0 22-12 36-34 40v-9c14-4 21-13 21-27H52V2z" fill="none" stroke="#c7cbd0" stroke-width="3"/></svg></div>
+            <div class="neu-card testi-text">
+              <div class="res-top"><div><h5>Brand Identity Project</h5><small>via Direct - May 3, 2018 - Dec 15, 2020</small></div><span class="stars">★★★★★</span></div><hr>
+              <p>If you are going to use a passage. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante. Ut tincidunt est ac dolor aliquam sodales phasellus smauris .</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="neu-card testi-person">
+            <img src="images/testimonial-5.png" alt="Marcus Webb">
+            <span class="company">Brightwave</span>
+            <h4>Marcus Webb</h4>
+            <small>Head of Marketing</small>
+          </div>
+          <div class="testi-side">
+            <div class="testi-top"><svg class="quote" viewBox="0 0 94 76" aria-hidden="true"><path d="M2 2h36v32c0 22-12 36-34 40v-9c14-4 21-13 21-27H2V2zM52 2h36v32c0 22-12 36-34 40v-9c14-4 21-13 21-27H52V2z" fill="none" stroke="#c7cbd0" stroke-width="3"/></svg></div>
+            <div class="neu-card testi-text">
+              <div class="res-top"><div><h5>E-commerce Platform</h5><small>via Upwork - Aug 1, 2019 - Mar 22, 2021</small></div><span class="stars">★★★★★</span></div><hr>
+              <p>Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante. Ut tincidunt est ac dolor aliquam sodales phasellus smauris .</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dots" id="tDots"><i class="active"></i><i></i><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<div class="container"><hr class="divider"></div>
+
+<!-- ============ CLIENTS ============ -->
+<section class="section" id="clients">
+  <div class="container">
+    <div class="head-left reveal">
+      <span class="eyebrow">Popular clients</span>
+      <h2 class="title">Awesome Clients</h2>
+    </div>
+    <div class="row g-clients">
+      <div class="col-lg-4 reveal">
+        <div class="neu-card client-tabs" id="clientTabs">
+          <button data-c="0">JavaScript</button>
+          <button data-c="1" class="active">Product Design</button>
+          <button data-c="2">Wordpress</button>
+          <button data-c="3">HTML to React</button>
+          <button data-c="4">React To Laravel</button>
+          <button data-c="5">Python</button>
+        </div>
+      </div>
+      <div class="col-lg-8 reveal">
+        <div class="client-grid" id="clientGrid"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><hr class="divider"></div>
+
+<!-- ============ PRICING ============ -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="row g-clients align-items-start">
+      <div class="col-lg-5 reveal">
+        <div class="pricing-head">
+          <span class="eyebrow">Pricing</span>
+          <h2 class="title">My Pricing</h2>
+        </div>
+      </div>
+      <div class="col-lg-7 reveal">
+        <div class="price-wrap">
+          <span class="recommended">Recommended</span>
+          <div class="tab-bar price-tabs" id="priceTabs">
+            <button class="tab-btn" data-p="0">Static</button>
+            <button class="tab-btn active" data-p="1">Standard</button>
+            <button class="tab-btn" data-p="2">Premium</button>
+          </div>
+          <div class="neu-card price-card" id="priceCard">
+            <div class="price-top">
+              <div><h4 id="pName">Design Make this Page</h4><span id="pSub">Elementor</span></div>
+              <div class="price-badge" id="pPrice">$50.00</div>
+            </div>
+            <p class="price-desc">Making this the first true generator on the Internet. It uses a dictionary &amp; plugin Development.</p>
+            <ul class="check-list" id="pList"></ul>
+            <a href="#contact" class="btn-neu btn-order">ORDER NOW <svg class="ic ic-pink"><use href="#i-arrow-right"/></svg></a>
+            <div class="price-foot">
+              <span><svg class="ic"><use href="#i-clock"/></svg>2 Days Delivery</span>
+              <span><svg class="ic"><use href="#i-activity"/></svg>Unlimited Revission</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><hr class="divider"></div>
+
+<!-- ============ BLOG ============ -->
+<section class="section" id="blog">
+  <div class="container">
+    <div class="head-center reveal">
+      <span class="eyebrow">Visit my blog and keep your feedback</span>
+      <h2 class="title">My Blog</h2>
+    </div>
+    <div class="row g-neu">
+      <div class="col-lg-4 col-md-6 reveal"><a href="#" class="neu-card post"><img src="images/blog-1.png" alt=""><div class="meta"><span class="cat">Canada</span><span class="likes"><svg class="ic"><use href="#i-clock"/></svg>2 min read</span></div><h4>T-shirt design is the part of design</h4></a></div>
+      <div class="col-lg-4 col-md-6 reveal"><a href="#" class="neu-card post"><img src="images/blog-2.png" alt=""><div class="meta"><span class="cat">Development</span><span class="likes"><svg class="ic"><use href="#i-clock"/></svg>2 hour read</span></div><h4>The services provide for design</h4></a></div>
+      <div class="col-lg-4 col-md-6 reveal"><a href="#" class="neu-card post"><img src="images/blog-3.png" alt=""><div class="meta"><span class="cat">Application</span><span class="likes"><svg class="ic"><use href="#i-clock"/></svg>5 min read</span></div><h4>Mobile app landing design &amp; app maintain</h4></a></div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><hr class="divider"></div>
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="head-center reveal">
+      <span class="eyebrow">Contact</span>
+      <h2 class="title">Contact With Me</h2>
+    </div>
+    <div class="row g-clients">
+      <div class="col-lg-5 reveal">
+        <div class="neu-card contact-info">
+          <img src="images/contact.png" alt="">
+          <h3>Jannatul Islam</h3>
+          <span class="role">Assistent Senior Officer</span>
+          <p>I am available for freelance work. Connect with me via and call in to my account.</p>
+          <p class="cl">Phone: +8801786821208<br>Email: jannatulislam.dev@gmail.com</p>
+          <h6 class="mini-label dark">Find with me</h6>
+          <div class="icon-row">
+            <a href="#" class="icon-box" aria-label="Facebook"><svg class="ic"><use href="#i-facebook"/></svg></a>
+            <a href="#" class="icon-box" aria-label="LinkedIn"><svg class="ic"><use href="#i-linkedin"/></svg></a>
+            <a href="#" class="icon-box" aria-label="Instagram"><svg class="ic"><use href="#i-instagram"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 reveal">
+        <form class="neu-card contact-form" id="contactForm" novalidate>
+          <div class="row g-3">
+            <div class="col-6"><label for="cName">Your Name</label><input type="text" id="cName" required></div>
+            <div class="col-6"><label for="cPhone">Phone Number</label><input type="text" id="cPhone"></div>
+            <div class="col-12"><label for="cEmail">Email</label><input type="email" id="cEmail" required></div>
+            <div class="col-12"><label for="cSubject">Subject</label><input type="text" id="cSubject"></div>
+            <div class="col-12"><label for="cMsg">Your Message</label><textarea id="cMsg" rows="6" required></textarea></div>
+            <div class="col-12"><button type="submit" class="btn-neu btn-send" id="sendBtn"><span>Send Message</span> <svg class="ic ic-pink"><use href="#i-arrow-right"/></svg></button></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><hr class="divider"></div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <img src="images/logo image.jpg" alt="Inbio">
+  <h5>JANNAT</h5>
+  <p>© 2026. All rights reserved by Jannatul Islam.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
